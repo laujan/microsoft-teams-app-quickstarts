@@ -1,0 +1,89 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "1.0.0",
+    "id": "8303141a-8528-4bd2-ae14-acfc4bc50c2d",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Developer Name",
+        "websiteUrl": "https://localhost:3000",
+        "privacyUrl": "https://localhost:3000/privacy",
+        "termsOfUseUrl": "https://localhost:3000/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "action",
+        "full": "action"
+    },
+    "description": {
+        "short": "Short description for action.",
+        "full": "Full description of action for Microsoft Teams."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [
+        {
+            "botId": "00000000-0000-0000-0000-000000000000",
+            "commands": [
+                {
+                    "id": "createCard",
+                    "type": "action",
+                    "context": [
+                        "compose"
+                    ],
+                    "description": "Command to run action to create a Card from Compose Box",
+                    "title": "Create Card",
+                    "parameters": [
+                        {
+                            "name": "title",
+                            "title": "Card title",
+                            "description": "Title for the card",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "subTitle",
+                            "title": "Subtitle",
+                            "description": "Subtitle for the card",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "text",
+                            "title": "Text",
+                            "description": "Text for the card",
+                            "inputType": "textarea"
+                        }
+                    ]
+                },
+                {
+                    "id": "shareMessage",
+                    "type": "action",
+                    "context": [
+                        "message"
+                    ],
+                    "description": "Test command to run action on message context (message sharing)",
+                    "title": "Share Message",
+                    "parameters": [
+                        {
+                            "name": "includeImage",
+                            "title": "Include Image",
+                            "description": "Include image in Hero Card",
+                            "inputType": "toggle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "localhost:3000"
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "1.0.0",
+    "id": "af479138-724e-44ce-b27e-b06c027282ef",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Developer Name",
+        "websiteUrl": "https://localhost:3000",
+        "privacyUrl": "https://localhost:3000/privacy",
+        "termsOfUseUrl": "https://localhost:3000/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "search",
+        "full": "search"
+    },
+    "description": {
+        "short": "Short description for search.",
+        "full": "Full description of search for Microsoft Teams."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [
+        {
+            "botId": "00000000-0000-0000-0000-000000000000",
+            "canUpdateConfiguration": true,
+            "commands": [
+                {
+                    "id": "searchQuery",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Test command to run query",
+                    "title": "Search",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "searchQuery",
+                            "title": "Search Query",
+                            "description": "Your search query",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "localhost:3000"
+    ]
+}

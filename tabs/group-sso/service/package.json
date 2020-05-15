@@ -1,0 +1,31 @@
+{
+  "name": "testserver",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "botbuilder": "~4.7.0",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.15.3",
+    "express-bearer-token": "^2.1.1",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "mongodb": "^3.0.6",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.1.2",
+    "passport": "^0.4.0",
+    "passport-azure-ad": "^4.1.0",
+    "pug": "^2.0.4",
+    "random-number-csprng": "^1.0.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
+  "scripts": {
+    "sso-server-start": "node ./server.js"
+  },
+  "resolutions": {
+    "bson": "1.1.4"
+  }
+}

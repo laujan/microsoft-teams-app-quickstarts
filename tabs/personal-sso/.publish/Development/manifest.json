@@ -1,0 +1,50 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "1.0.0",
+    "id": "e93ca4d4-4b32-4c93-9a7b-dce7f5d3fc78",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Developer Name",
+        "websiteUrl": "https://localhost:3000",
+        "privacyUrl": "https://localhost:3000/privacy",
+        "termsOfUseUrl": "https://localhost:3000/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "personal-sso",
+        "full": "personal-sso"
+    },
+    "description": {
+        "short": "Short description for personal-sso.",
+        "full": "Full description of personal-sso for Microsoft Teams."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [
+        {
+            "entityId": "index",
+            "name": "Personal Tab",
+            "contentUrl": "https://localhost:3000/personal",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "localhost:3000"
+    ],
+    "webApplicationInfo": {
+        "id": "<APPSETTING_AAD_ApplicationId>",
+        "resource": "api://localhost:3000/<APPSETTING_AAD_ApplicationId>"
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.6/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.6",
+    "version": "1.0.0",
+    "id": "966fed23-17e9-4bbc-9477-1c9e035cd7f6",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Developer Name",
+        "websiteUrl": "https://localhost:3000",
+        "privacyUrl": "https://localhost:3000/privacy",
+        "termsOfUseUrl": "https://localhost:3000/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "conversation",
+        "full": "conversation"
+    },
+    "description": {
+        "short": "Short description for conversation.",
+        "full": "Full description of conversation for Microsoft Teams."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "00000000-0000-0000-0000-000000000000",
+            "scopes": [
+                "personal",
+                "groupchat",
+                "team"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "groupchat",
+                        "team"
+                    ],
+                    "commands": [
+                        {
+                            "title": "Hello",
+                            "description": "Sends a hello message and @mention the sender"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "localhost:3000"
+    ]
+}
